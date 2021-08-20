@@ -14,7 +14,7 @@ const BillCard = ({ bill, onBillClick, onFireBill }) => {
       <div
         className="ui card"
         key={bill.id}
-        onClick={() => handleClick(bill)}
+        onClick={() => handleClick()}
       >
         <div className="image">
           <img alt={bill.name} src={bill.photo} />

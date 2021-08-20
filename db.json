@@ -10,15 +10,6 @@
       "photo": "https://www.fillmurray.com/200/300"
     },
     {
-      "id": 102,
-      "name": "Bill Murray Tangled",
-      "health": "awful",
-      "salary": 100,
-      "rating": 1,
-      "catchphrase": "And I don't like to work. I only like working when I'm working.",
-      "photo": "https://www.fillmurray.com/300/200"
-    },
-    {
       "id": 103,
       "name": "Squinting Bill Murray",
       "health": "okay",
