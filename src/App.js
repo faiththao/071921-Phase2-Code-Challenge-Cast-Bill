@@ -20,8 +20,8 @@ export default function App() {
 
   useEffect(() => {
     fetch(API)
-    .then(res => res.json())
-    .then(bills => setBills(bills))
+      .then(res => res.json())
+      .then(bills => setBills(bills))
   }, [])
 
   function addBill(billToAdd) {
@@ -34,8 +34,8 @@ export default function App() {
   }
 
   function removeBill(billToFire) {
-    setBillAdded((billAdded) => 
-    billAdded.filter((bill) => bill.id !== billToFire.id))
+    setBillAdded((billAdded) =>
+      billAdded.filter((bill) => bill.id !== billToFire.id))
   }
 
   function fireBill(removeBill) {
@@ -45,18 +45,20 @@ export default function App() {
 
   return (
     <div>
-      <SortBar 
-      bills={bills}
-      sortBy={sortBy}
-      setSortBy={setSortBy} 
+      <SortBar
+        bills={bills}
+        sortBy={sortBy}
+        setSortBy={setSortBy}
       />
-      <BillsCast bills={billAdded} 
-      onRemoveBill={removeBill} 
-      onFireBill={fireBill}
+      <BillsCast
+        bills={billAdded}
+        onRemoveBill={removeBill}
+        onFireBill={fireBill}
       />
-      <BillCollection bills={sortedBills} 
-      onAddBill={addBill} 
-      onFireBill={fireBill}
+      <BillCollection
+        bills={sortedBills}
+        onAddBill={addBill}
+        onFireBill={fireBill}
       />
     </div>
   );

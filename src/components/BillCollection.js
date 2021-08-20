@@ -4,11 +4,11 @@ import BillCard from './BillCard';
 export default function BillCollection({ bills, onAddBill, onFireBill }) {
   // Your code here
   const billsCollection = bills.map(bill => (
-    <BillCard 
-    key={bill.id}
-    bill={bill}
-    onBillClick={onAddBill}
-    onFireBill={onFireBill}
+    <BillCard
+      key={bill.id}
+      bill={bill}
+      onBillClick={onAddBill}
+      onFireBill={onFireBill}
     />
   ))
   return (

@@ -4,7 +4,7 @@ const BillCard = ({ bill, onBillClick, onFireBill }) => {
   function handleClick() {
     onBillClick(bill)
   }
-  
+
   function handleButton() {
     onFireBill(bill)
   }
@@ -42,7 +42,7 @@ const BillCard = ({ bill, onBillClick, onFireBill }) => {
             <div className="ui center aligned segment basic">
               <button
                 className="ui mini blue button"
-                onClick={() => 
+                onClick={() =>
                   handleButton(bill)}
               >
                 FIRE

@@ -3,16 +3,17 @@ import BillCard from './BillCard';
 
 export default function BillsCast({ bills, onRemoveBill, onFireBill }) {
   const billCast = bills.map(bill => (
-    <BillCard key={bill.id} 
-    bill={bill} 
-    onBillClick={onRemoveBill} 
-    onFireBill={onFireBill} />
+    <BillCard
+      key={bill.id}
+      bill={bill}
+      onBillClick={onRemoveBill}
+      onFireBill={onFireBill} />
   ))
   return (
     <div className="ui segment inverted blue bill-cast">
       <div className="ui five column grid">
         <div className="row bill-cast-row">
-        {billCast}
+          {billCast}
         </div>
       </div>
     </div>
