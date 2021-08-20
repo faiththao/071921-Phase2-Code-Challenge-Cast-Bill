@@ -13,8 +13,8 @@ export default function App() {
   const sortedBills = [...bills].sort((bill1, bill2) => {
     if (sortBy === "rating") {
       return bill2.rating - bill1.rating
-    } else {
-      return bill1 - bill2
+    } else if (sortBy === "salary") {
+      return bill1.salary - bill2.salary
     }
   })
 

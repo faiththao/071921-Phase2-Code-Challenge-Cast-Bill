@@ -43,7 +43,6 @@ const BillCard = ({ bill, onBillClick, onFireBill }) => {
               <button
                 className="ui mini blue button"
                 onClick={() => 
-                  // e.stopPropagation(),
                   handleButton(bill)}
               >
                 FIRE
