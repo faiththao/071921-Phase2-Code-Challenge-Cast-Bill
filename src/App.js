@@ -3,7 +3,11 @@ import BillCollection from './components/BillCollection';
 import BillsCast from './components/BillsCast';
 import SortBar from './components/SortBar';
 
-const API = 'http://localhost:8002/bills'
+const API = 'http://localhost:8002/bills';
+const headers = {
+  Accepts: 'application/json',
+  'Content-type': 'application/json',
+};
 
 export default function App() {
   const [bills, setBills] = useState([]);
@@ -39,8 +43,12 @@ export default function App() {
   }
 
   function fireBill(removeBill) {
+    fetch(`${API}/${removeBill.id}`, {
+      method: 'DELETE',
+      headers,
+    }).then (() =>
     setBills(bills =>
-      bills.filter(bill => bill.id !== removeBill.id))
+      bills.filter(bill => bill.id !== removeBill.id)))
   }
 
   return (
